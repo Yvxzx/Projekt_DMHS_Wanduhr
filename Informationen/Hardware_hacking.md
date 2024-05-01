@@ -7,10 +7,10 @@
 ### ESP32 Dev Board
 Auf der Rückseite unten gibt es 6 Stecker am Rand. Dort wird das ESP32 Dev Board verbunden. 
 ###  Mikrocontroller
-Oberhalb des angebrachtren ESP32 Dev Board muss der Mikrocontroller entfernt werden, da dort das alte Standartprogramm oben ist.
+Oberhalb des angebrachten ESP32 Dev Board muss der Mikrocontroller entfernt werden, da dort das alte Standartprogramm oben ist.
 
 ### Bild für Mikrocontroller und ESP32 Dev Board
-![supi bild](image.png)
+![supi Bild](image.png)
 
 
 ### Github Repository
