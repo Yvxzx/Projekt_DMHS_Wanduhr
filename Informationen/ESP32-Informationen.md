@@ -1,4 +1,4 @@
-# ESP-Informationen
+# ESP32-Informationen
 ### Programmieren
 Programmier Umgebungen
 - VS Code 

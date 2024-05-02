@@ -36,3 +36,4 @@ undip.txt(5);
 - Dieses Mal sind die Dateien nach dem Neustart nicht leer, so dass das ESP versucht, sich mit dem Netzwerk im Stationsmodus zu verbinden, indem Sie die Einstellungen verwenden, die Sie in das Formular eingefügt haben 7(7).
 
 - Wenn es eine Verbindung aufstellt, wird der Prozess erfolgreich abgeschlossen und Sie können auf die Hauptserverseite zugreifen, die alles tun kann, was Sie wollen (Steuersensoren, Steuerausgänge, Anzeige von Text usw.) (9). Andernfalls wird der Access Point (3), und Sie können auf die Standard-IP-Adresse zugreifen (192.168.4.1) eine weitere SSID/Passwort-Kombination hinzuzufügen.
+
