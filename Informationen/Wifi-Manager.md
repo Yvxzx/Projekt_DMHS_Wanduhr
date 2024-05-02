@@ -1,5 +1,24 @@
 # Wifi-Manager
+
+## Wie funktioniert es mit einem ESP32
+
+- Die ESP32 Boots up und prüft, ob es bereits ein WLAN-Netzwerk konfiguriert hat.
+
+- Wenn es WiFi-Anmeldeinformationen hat, verwendet es sie, um sich in ein Netzwerk einzuloggen. Angenommen, es ist erfolgreich, dann ist keine andere Aktion erforderlich, und es kann mit der Skizze beginnen.
+
+- Wenn es keine WLAN-Anmeldeinformationen hat oder wenn sie ungültig sind, stellt es sich stattdessen als Access Point auf. An Access Point bietet das ESP32 ein eigenes WLAN-Netzwerk für andere Geräte, mit denen man sich verbinden kann.
+
+- Es erstellt eine Webseite an einer Adresse von 192.168.4.1. Auf der Webseite gibt es eine Liste der verfügbaren WLAN-Netzwerke, die Sie verbinden können, sowie Textboxen für die Eingabe Ihrer SSID und Passwort. Sie können es auch so konfigurieren, dass zusätzliche Textboxen (oder andere HTML-Elemente) andere Konfigurationsinformationen erhalten, die Sie benötigen.
+
+- Der Benutzer gibt die entsprechenden Informationen ein und drückt die Schaltfläche Speichern. Die Informationen werden an das ESP32 übermittelt.
+
+- Das ESP32 wechselt zurück in den Stationsmodus und versucht, sich mit den mitgelieferten Anmeldeinformationen mit dem gewünschten WLAN-Netzwerk zu verbinden.
+
+- Geht man davon aus, dass der Benutzer die richtigen Anmeldedaten geliefert hat, wird das ESP32 nun mit dem WLAN-Netzwerk verbunden.
+
+
 ## Was passiert
+
 ![Flussdiagramm](image-1.png)
 - Wenn das ESP anfängt, versucht es, diessid.txt,pass.txtundip.txtDateien zu lesen(1);
 

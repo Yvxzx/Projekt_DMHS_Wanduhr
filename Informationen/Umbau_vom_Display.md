@@ -1,7 +1,6 @@
-# 
+# Umbau vom Display
 
-## Materialien
-### Was muss gemacht werden
+## Was muss gemacht werden
 - ESP32 Dev Board anbringen
 - Mikrocontroller entfernen
 - Konfigurieren von WLAN mit WiFi-Manager
@@ -12,7 +11,3 @@ Oberhalb des angebrachten ESP32 Dev Board muss der Mikrocontroller entfernt werd
 
 ### Bild für Mikrocontroller und ESP32 Dev Board
 ![Orte_zum_Umbauen](image.png)
-
-
-### Github Repository
-https://github.com/ph1p/ikea-led-obegraensad 

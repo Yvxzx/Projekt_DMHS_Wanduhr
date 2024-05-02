@@ -1,6 +1,14 @@
 # Informationen
+
 ## Wifi-Manager
-https://randomnerdtutorials.com/esp32-wi-fi-manager-asyncwebserver/
-https://github.com/tzapu/WiFiManager
+
+- https://github.com/tzapu/WiFiManager
+#### Was passiert
+- https://randomnerdtutorials.com/esp32-wi-fi-manager-asyncwebserver/
+
+#### Wie funktioniert es mit einem ESP32
+- https://dronebotworkshop.com/wifimanager/
+
 ## Umbau_vom_Display
-https://github.com/ph1p/ikea-led-obegraensad?tab=readme-ov-file#configuring-wifi-with-wifi-manager
+#### Was muss gemacht werden
+- https://github.com/ph1p/ikea-led-obegraensad?tab=readme-ov-file#configuring-wifi-with-wifi-manager
