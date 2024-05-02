@@ -1,4 +1,4 @@
-# ESP-Informationen
+# ESP32-Informationen
 ### Programmieren
 - VS Code 
 
