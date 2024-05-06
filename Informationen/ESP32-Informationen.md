@@ -10,8 +10,8 @@ Programmier Umgebungen
   
 #### Programmiersprachen:
 - **Arduino C/C++**: https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions  
-- Espressif IDF: https://www.phippselectronics.com/run-your-first-esp32-program-in-visual-studio-code/
-- Micropython:  
-    - *Setup, Programm the ESP32: https://www.youtube.com/watch?v=AitCKcyjHuQ*  
-    - 
-
+- *Espressif IDF*: https://www.phippselectronics.com/run-your-first-esp32-program-in-visual-studio-code/
+- *Micropython*:  
+    - *Setup, Programm the ESP32: https://www.youtube.com/watch?v=AitCKcyjHuQ*
+- *JavaScript*
+- *LUA*
