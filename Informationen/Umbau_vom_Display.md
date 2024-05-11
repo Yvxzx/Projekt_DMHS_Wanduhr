@@ -11,3 +11,7 @@ Oberhalb des angebrachten ESP32 Dev Board muss der Mikrocontroller entfernt werd
 
 ### Bild für Mikrocontroller und ESP32 Dev Board
 ![Orte_zum_Umbauen](image.png)
+
+
+Display ist erweiterbar
+buchstaben formate hinzufügen
