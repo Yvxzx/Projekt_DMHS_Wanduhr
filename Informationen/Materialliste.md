@@ -1,0 +1,7 @@
+- ESP32 MicroMod
+- SparkFun MicroMod ATP Carrier Board
+- Lötmaterial 
+- Steckansätze für Display
+- Steckdräte
+- OBERGRÄNSAD IKEA Display
+- 
