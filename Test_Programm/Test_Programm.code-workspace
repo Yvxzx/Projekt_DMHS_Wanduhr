@@ -6,6 +6,10 @@
 		{
 			"name": "Test_Proj-ESP32_Sparkfun",
 			"path": "../../../../../OneDrive/Dokumente/PlatformIO/Projects/Test_Proj-ESP32_Sparkfun"
+		},
+		{
+			"name": "TEst_ProjInC",
+			"path": "../../../../../OneDrive/Dokumente/PlatformIO/Projects/TEst_ProjInC"
 		}
 	],
 	"settings": {}
