@@ -1,3 +1,0 @@
-- Wie können wir Programmiersprache C bei Arduion auswählen
-- Wie montieren wir die Uhr
-- Wer gibt wem Strom 
