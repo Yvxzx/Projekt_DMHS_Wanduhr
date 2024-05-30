@@ -10,16 +10,16 @@ void setup() {
 
 void loop() {
 
-String zeit1 = rtc.getTime("%H:%M");
+String time1 = rtc.getTime("%H:%M");
 int i = 0;
 
     while (i = 1)
     {
-        String zeit2 = rtc.getTime("%H:%M");
+        String time2 = rtc.getTime("%H:%M");
 
-        if(zeit1 =! zeit2)
+        if(time1 =! time2)
         {
-            Serial.print(rtc.getTime("%H:%M"));
+            rtc.getTime("%H:%M");
             i++;
 
             delay(1000);
