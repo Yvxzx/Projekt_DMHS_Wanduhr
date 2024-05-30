@@ -19,7 +19,7 @@ int i = 0;
 
         if(zeit1 =! zeit2)
         {
-            Serial.println(rtc.getTime("%H:%M"));
+            Serial.print(rtc.getTime("%H:%M"));
             i++;
 
             delay(1000);
