@@ -2,6 +2,7 @@
 
 #include <Arduino.h>
 #include <ESP32Time.h>
+#include <time.h>
 
 static ESP32Time rtc;
 
@@ -12,6 +13,11 @@ static ESP32Time rtc;
  */
 void CP_init(int offset) 
 {
+    struct tm build_time;
+
+    strptime(__DATE__ " " __TIME__, "%b %d %Y %H:%M:%S", &build_time);
+    rtc.setTime(mktime(&build_time) - offset);
+
     rtc.offset = offset;
 }
 
@@ -22,28 +28,17 @@ void CP_init(int offset)
  */
 String CP_getHourAsString()
 {
-    // Serial.println(rtc.getTime("%d.%m.%Y %H:%M:%S"));
-    return rtc.getTime("%H:%M");
+    // Serial.println(rtc.getTime("%H"));
+    return rtc.getTime("%H");
 } 
 
-
-/*static void CP_loop() {
-
-    String time1 = rtc.getTime("%H:%M");
-    int i = 0;
-
-    while (i > 0)
-    {
-        String time2 = rtc.getTime("%H:%M");
-
-        if(time1 != time2)
-        {
-            String hour = rtc.getTime("%H");
-            String minute = rtc.getTime("%M");
-
-            i++;
-            delay(1000);
-        }
-    }
-}
-*/
+/**
+ * \brief   Formats the current minute as string
+ * 
+ * \return  String with the current minute as string formatted number
+ */
+String CP_getMinuteAsString()
+{
+    // Serial.println(rtc.getTime("%M"));
+    return rtc.getTime("%M");
+} 

@@ -11,6 +11,7 @@ void setup() {
 void loop() 
 {
   Serial.println(CP_getHourAsString());
-  delay(1000);
+  Serial.println(CP_getMinuteAsString());
+  delay(60000);
 }
 
