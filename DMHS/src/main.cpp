@@ -9,7 +9,8 @@ void setup() {
   RD_init();
 }
 
-void loop() {
+void loop() 
+{
   Serial.println(CP_getHourAsString());
   delay(1000);
 }
