@@ -8,7 +8,8 @@ void setup() {
   CP_init(7200);
 }
 
-void loop() {
+void loop() 
+{
   Serial.println(CP_getHourAsString());
   delay(1000);
 }

@@ -3,7 +3,8 @@
 #include <Arduino.h>
 #include <ESP32Time.h>
 
-static ESP32Time rtc;  
+static ESP32Time rtc;
+
 /**
  * \brief   Initializes the clock access module
  * 
@@ -22,8 +23,9 @@ void CP_init(int offset)
 String CP_getHourAsString()
 {
     // Serial.println(rtc.getTime("%d.%m.%Y %H:%M:%S"));
-    return rtc.getTime("%d.%m.%Y %H:%M:%S");
+    return rtc.getTime("%H:%M");
 } 
+
 
 /*static void CP_loop() {
 
