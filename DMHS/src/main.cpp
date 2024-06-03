@@ -1,6 +1,7 @@
 #include <Arduino.h>
 
 #include "Clock/ClockProvider.h"
+#include "Renderer/Renderer.h"
 
 void setup() {
   Serial.begin(115200);
