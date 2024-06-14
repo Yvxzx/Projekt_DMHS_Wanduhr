@@ -6,7 +6,7 @@
 
 static ESP32Time rtc;
 
-/**
+/**git
  * \brief   Initializes the clock access module
  * 
  * \param[in]   offset  [s] Number of seconds the timezone is away from UTC
