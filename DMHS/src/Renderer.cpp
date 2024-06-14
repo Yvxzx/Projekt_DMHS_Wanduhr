@@ -6,7 +6,6 @@ int array[4][4] = {
     {1, 1, 1, 1},
     {1, 1, 1, 1}
 };
-
 int i = 0;
 void RD_init() {
     Serial.begin(115200);

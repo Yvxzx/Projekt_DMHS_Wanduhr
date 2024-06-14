@@ -6,6 +6,7 @@ void setup() {
   Serial.begin(115200);
 
   CP_init(7200);
+  RD_init();
 }
 
 void loop() 
