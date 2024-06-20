@@ -104,6 +104,7 @@ void loop()
     image[4][13] = 0xff;
     image[5][12] = 0xff;
     image[4][9] = 0xff;
+    image[4][10] = 0xff;
     if (j == 0){
       j++;
       image[5][10] = 0;
@@ -241,7 +242,7 @@ void loop()
 
     i = 0;
 
-    delay(5000);
+    //delay(5000);
   }
   // x++;
   // if (x >= 16) {
