@@ -12,6 +12,7 @@ const uint8_t CLK = GPIO_NUM_26;
 
 static uint8_t buffer[256] = { 0 };
 static uint8_t image[16][16] = { 0 };
+static int j = 0;
 
 void ImagePrint(const uint8_t image[][16]);
 
@@ -49,18 +50,71 @@ void loop()
   delay(100);
 
   image[x][y] = 0;
-  x++;
-  if (x >= 16) {
-    x = 0;
-    y++;
-  }
-  if (y >= 16) {
-    y = 0;
-    x = 0;
-  }
-  image[x][y] = 0xff;
 
-//  ImagePrint(image);
+  // Zahl 2
+  image[0][1] = 0xff;
+  image[1][0] = 0xff;
+  image[2][0] = 0xff;
+  image[3][1] = 0xff;
+  image[3][2] = 0xff;
+  image[2][3] = 0xff;
+  image[1][3] = 0xff;
+  image[0][4] = 0xff;
+  image[0][5] = 0xff;
+  image[0][6] = 0xff;
+  image[1][6] = 0xff;
+  image[2][6] = 0xff;
+  image[3][6] = 0xff;
+
+  // Zahl 3
+  image[6][0] = 0xff;
+  image[7][0] = 0xff;
+  image[8][1] = 0xff;
+  image[8][2] = 0xff;
+  image[7][3] = 0xff;
+  image[6][3] = 0xff;
+  image[8][4] = 0xff;
+  image[8][5] = 0xff;
+  image[7][6] = 0xff;
+  image[6][6] = 0xff;
+
+  // Smili
+  image[2][9] = 0xff;
+  image[2][10] = 0xff;
+  image[1][12] = 0xff;
+  image[2][13] = 0xff;
+  image[3][13] = 0xff;
+  image[4][13] = 0xff;
+  image[5][12] = 0xff;
+  image[4][9] = 0xff;
+  if (j == 0){
+    j++;
+    image[5][10] = 0;
+    image[4][10] = 0xff;
+    delay(1000);
+  }
+  else{
+    image[4][9] = 0;
+    image[5][10] = 0xff;
+    delay(1000);
+    j = 0;
+  }
+  
+
+
+
+  // x++;
+  // if (x >= 16) {
+  //   x = 0;
+  //   y++;
+  // }
+  // if (y >= 16) {
+  //   y = 0;
+  //   x = 0;
+  // }
+  // image[x][y] = 0xff;
+
+ImagePrint(image);
 }
 
 void ImagePrint(const uint8_t image[][16]) {
