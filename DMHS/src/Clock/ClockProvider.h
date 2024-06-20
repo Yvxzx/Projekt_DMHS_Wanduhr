@@ -10,3 +10,5 @@
 void CP_init(int offset);
 
 String CP_getHourAsString();
+
+String CP_getMinuteAsString();

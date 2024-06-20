@@ -16,3 +16,9 @@
 
 ## CLockFunktion
 - https://www.arduino.cc/reference/en/libraries/esp32time/ 
+
+- https://www.ibm.com/docs/en/i/7.3?topic=functions-strptime-convert-string-datetime
+
+- https://cplusplus.com/search.do?q=strptime
+
+- https://pubs.opengroup.org/onlinepubs/009695399/functions/strptime.html
