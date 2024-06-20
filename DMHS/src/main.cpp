@@ -15,6 +15,24 @@ static uint8_t image[16][16] = { 0 };
 static int j = 0;
 static int i = 0;
 
+/*
+// Buchstaben-Jagd IMS-T
+int number1 = 2;
+int number2 = 3;
+int solution = 0;
+
+solution = number1 + number2;
+
+if(solution != 5)
+{
+  Serial.println("Number 7 at position 6");
+}
+else
+{
+  Serial.println("Number 8 at position 6");
+}
+*/
+
 void ImagePrint(const uint8_t image[][16]);
 
 void setup() {
@@ -270,20 +288,3 @@ void ImagePrint(const uint8_t image[][16]) {
   Serial.println("+----------------------------------+");
 }
 
-/*
-// Buchstaben-Jagd IMS-T
-int number1 = 2;
-int number2 = 3;
-int solution = 0;
-
-solution = number1 + number2;
-
-if(solution != 5)
-{
-  Serial.println("Number 7 at position 6");
-}
-else
-{
-  Serial.println("Number 8 at position 6");
-}
-*/
