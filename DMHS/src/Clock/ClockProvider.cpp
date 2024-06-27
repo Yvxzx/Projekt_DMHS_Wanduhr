@@ -6,15 +6,17 @@
 
 static ESP32Time rtc;
 
-/**git
+/**
  * \brief   Initializes the clock access module
  * 
  * \param[in]   offset  [s] Number of seconds the timezone is away from UTC
  */
 void CP_init(int offset) 
 {
+    // Defines a variable from the library <time.h> (struct tm)
     struct tm build_time;
 
+    // returs a date time string, (__DATE__ " " __TIME__) is going to be replaced by current time / date 
     strptime(__DATE__ " " __TIME__, "%b %d %Y %H:%M:%S", &build_time);
     rtc.setTime(mktime(&build_time) - offset);
 
