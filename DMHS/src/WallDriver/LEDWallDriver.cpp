@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
 
-// Sets GPIO(General Purpous Input Output) Ports to Easily readable Abreviations.
+// Sets GPIO(General Purpous Input Output) Ports as easily readable abreviations.
 const uint8_t OE = GPIO_NUM_15;
 const uint8_t LA = GPIO_NUM_17;
 const uint8_t SDI = GPIO_NUM_25;
@@ -34,7 +34,7 @@ void WD_BufferOutput(const uint8_t *buffer) {
  * \param[in] value buffer values either on or off.
  */
 static void PixelPush(uint8_t value) {
-                // oneline if statment.
+                // one-line if statment.
   digitalWrite(SDI, value > 0 ? HIGH : LOW);
   delayMicroseconds(1);
   digitalWrite(CLK, HIGH);
