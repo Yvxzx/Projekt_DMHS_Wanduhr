@@ -119,9 +119,6 @@ if(i <= 15)
     }
     
   }
-
-
-
   // Zahl 2
   image[0][1] = 0xff;
   image[1][0] = 0xff;
