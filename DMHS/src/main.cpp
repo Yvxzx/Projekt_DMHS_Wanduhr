@@ -25,8 +25,6 @@ void ImagePrint(const uint8_t image[][16]);
 
 /**
  * \brief the first process that runs
- * 
- * 
 */
 void setup() {
   Serial.begin(115200); // Bits per seconds (Uploadspeed)
