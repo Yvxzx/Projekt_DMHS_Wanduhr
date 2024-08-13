@@ -16,7 +16,7 @@ void WD_init() {}
  * 
  * \param buffer reads the buffer array one by one and pushes them one by one
  */
-void WD_BufferOutput(const uint8) {
+void WD_BufferOutput(const uint8_t) {
   digitalWrite(LA, LOW);
 
   for (int i = 0;i < 256;i++) {
@@ -41,4 +41,3 @@ static void PixelPush(uint8_t value) {
   delayMicroseconds(1);
   digitalWrite(CLK, LOW);
 }
-
