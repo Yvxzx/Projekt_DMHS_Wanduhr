@@ -7,7 +7,7 @@
 #include "LedWallEncoder/LedWallEncoder.h"
 #include "WallDriver/LEDWallDriver.h"
 
-// Sets GPIO(General Purpous Input Output) Ports to Easily readable Abreviations.
+// sets GPIO(General Purpous Input Output) Ports to Easily readable Abreviations.
 const uint8_t OE = GPIO_NUM_15;
 const uint8_t LA = GPIO_NUM_17;
 const uint8_t SDI = GPIO_NUM_25;
@@ -32,7 +32,7 @@ void setup() {
   CP_init(7200); // Time offset in seconds
   Serial.println("Renderer init");
 
-  // Prepares GPIO's for further instructions
+  // prepares GPIO's for further instructions
   pinMode(OE, OUTPUT);
   pinMode(LA, OUTPUT);
   pinMode(SDI, OUTPUT);
@@ -45,14 +45,14 @@ void setup() {
 }
 
 
-// Loop that runns indefinetly 
+// loop that runns indefinetly 
 void loop() 
 {
-  // Outputs, Minutes and Hours
+  // outputs, Minutes and Hours
   Serial.println(CP_getHourAsString());
   Serial.println(CP_getMinuteAsString());
   
-  //RD_run();
+  // RD_run();
 
   LWC_Encode(buffer, image);
   // memset(buffer, 0, sizeof(buffer));
@@ -72,10 +72,14 @@ void loop()
     {0xff,0x00,0xff,0x00,0x00,0x00,0xff,0x00,0x00,0x00,0x00,0xff},
     {0xff,0x00,0xff,0x00,0x00,0x00,0xff,0x00,0x00,0x00,0x00,0xff},
     {0xff,0x00,0xff,0x00,0x00,0x00,0xff,0x00,0xff,0xff,0xff,0x00},
+<<<<<<< HEAD
   };
+=======
+};
+>>>>>>> 987b84503866763ee1e4ddb939d3f707693839f9
 
   // stores values from IMSTimage into Image
-  //LWC_Encode( buffer, image);
+  // LWC_Encode( buffer, image);
   image[y][x] = 0;
   for (int x = 0;x < 15; x++)
   {
