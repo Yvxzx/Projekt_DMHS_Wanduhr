@@ -94,8 +94,7 @@ void loop()
       image[y][x] = Glyph9[x][y];
     }
   }
-ImagePrint(image);
-delay(10000);
+  ImagePrint(image);
 }
 
 /**
