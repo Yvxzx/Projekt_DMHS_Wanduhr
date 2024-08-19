@@ -4,4 +4,4 @@
 
 void PG_init();
 
-void PrintGlyphs(Char glyphID, int posY, int posX);
+void PrintGlyphs();
