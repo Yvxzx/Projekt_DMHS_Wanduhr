@@ -6,6 +6,8 @@
 #include "Renderer/Renderer.h"
 #include "LedWallEncoder/LedWallEncoder.h"
 #include "WallDriver/LEDWallDriver.h"
+#include "Glyphs/PrintGlyph.h"
+
 
 // sets GPIO(General Purpous Input Output) Ports to Easily readable Abreviations.
 const uint8_t OE = GPIO_NUM_15;
@@ -18,9 +20,6 @@ static uint8_t buffer[256] = { 0 };
 static uint8_t image[16][16] = { 0 };
 static int j = 0;
 static int i = 0;
-static int x = 0;
-static int y = 0;
-static int smiliIf = 0;
 static char ab;
 
 void ImagePrint(const uint8_t image[][16]);
@@ -64,6 +63,9 @@ void loop()
 
   delay(100);
 
+  GlyphPos1();
+  ImagePrint(image);
+/*
   // Glyphs
   const uint8_t Glyph0[7][4] = 
   {
@@ -207,25 +209,6 @@ void loop()
     }    
     smiliIf = 0;
   }
-
-
-ImagePrint(image);
+*/
 }
 
-/**
- * \brief Draws preview of led display for moblie modifications.
- * 
- * \param image Uses image to print in serial monitor
- */
-
-void ImagePrint(const uint8_t image[][16]) {
-  Serial.println("+----------------------------------+");
-  for (int y = 0;y < 16;y++) {
-    Serial.print("| ");
-    for (int x = 0;x < 16;x++) {
-      Serial.print(image[x][y] > 0 ? "XX" : "  ");
-    }
-    Serial.println(" |");
-  }
-  Serial.println("+----------------------------------+");
-}
