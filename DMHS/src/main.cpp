@@ -61,9 +61,9 @@ void loop()
 
   WD_BufferOutput(buffer);
 
-  delay(100);
+  delay(1000);
 
-  GlyphPos1();
+  GlyphPos1(image);
   ImagePrint(image);
 /*
   // Glyphs

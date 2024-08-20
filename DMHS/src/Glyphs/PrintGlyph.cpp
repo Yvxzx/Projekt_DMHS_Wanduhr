@@ -1,9 +1,5 @@
- #include <stdint.h>
- #include <Arduino.h>
-
-static uint8_t image[16][16] = { 0 };
-static int x = 0;
-static int y = 0;
+#include <stdint.h>
+#include <Arduino.h>
 
 typedef struct sGlyph {
   uint8_t width;
@@ -222,16 +218,15 @@ static const tGlyph GlyphS2 = {
 };
 void PG_init() { }
 
-void GlyphPos1()
+void GlyphPos1(uint8_t image[][16])
 {
   int i = 0;
-  image[y][x] = 0;
   for (int x = 0;x < Glyph2.height; x++)
   {
     for (int y = 0;y < Glyph2.width; y++)
     {
-      i++;
       image[y][x] = Glyph2.glyph[i];
+      i++;
     }
   }
 }
