@@ -1,6 +1,9 @@
 #include <stdint.h>
 #include <Arduino.h>
 
+const int posX;
+const int posY;
+
 typedef struct sGlyph {
   uint8_t width;
   uint8_t height;
@@ -21,7 +24,6 @@ static const tGlyph Glyph0 = {
     0x00,0xff,0xff,0x00   
   }
 };
-
 // 1
 static const tGlyph Glyph1 = {
   .width = 4,
@@ -37,8 +39,6 @@ static const tGlyph Glyph1 = {
     0x00,0x00,0xff,0x00
   }
 };
-
-
 // 2
 static const tGlyph Glyph2 = {
   .width = 4,
@@ -54,8 +54,6 @@ static const tGlyph Glyph2 = {
     0xff,0xff,0xff,0xff
   }
 };
-
-
 // 3
 static const tGlyph Glyph3 = {
   .width = 4,
@@ -71,8 +69,6 @@ static const tGlyph Glyph3 = {
     0x00,0xff,0xff,0x00
   }
 };
-
-
 // 4
 static const tGlyph Glyph4 = {
   .width = 4,
@@ -88,7 +84,6 @@ static const tGlyph Glyph4 = {
     0x00,0x00,0x00,0xff
   }
 };
-
 // 5
 static const tGlyph Glyph5 = {
   .width = 4,
@@ -104,7 +99,6 @@ static const tGlyph Glyph5 = {
     0x00,0xff,0xff,0x00
   }
 };
- 
 // 6
 static const tGlyph Glyph6 = {
   .width = 4,
@@ -120,8 +114,6 @@ static const tGlyph Glyph6 = {
     0x00,0xff,0xff,0x00
   }
 };
-
-
 // 7
 static const tGlyph Glyph7 = {
   .width = 4,
@@ -137,7 +129,6 @@ static const tGlyph Glyph7 = {
     0x00,0x00,0xff,0x00
   }
 };
-
 // 8
 static const tGlyph Glyph8 = {
   .width = 4,
@@ -153,7 +144,6 @@ static const tGlyph Glyph8 = {
     0x00,0xff,0xff,0x00
   }
 };
-
 // 9
 static const tGlyph Glyph9 = {
   .width = 4,
@@ -184,7 +174,6 @@ static const tGlyph GlyphH = {
     0xff,0x00,0x00,0xff
   }
 };
-
 // S1
 static const tGlyph GlyphS1 = {
   .width = 5,
@@ -200,7 +189,6 @@ static const tGlyph GlyphS1 = {
     0x00,0x00,0x00,0x00,0x00
   }
 };
-
 // S2
 static const tGlyph GlyphS2 = {
   .width = 5,
@@ -216,6 +204,7 @@ static const tGlyph GlyphS2 = {
     0x00,0x00,0x00,0x00,0x00
   }
 };
+
 void PG_init() { }
 
 void GlyphPos1(uint8_t image[][16])
