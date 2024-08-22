@@ -1,8 +1,16 @@
 #include <stdint.h>
 #include <Arduino.h>
 
-const int posX = 0;
-const int posY = 5;
+
+typedef struct sCursor{
+  uint8_t posX;
+  uint8_t posY;
+}tCursor;
+
+static const tCursor Cursor1 = {
+  .posX = 0,
+  .posY = 0
+};
 
 typedef struct sGlyph {
   uint8_t width;
@@ -208,19 +216,18 @@ static const tGlyph GlyphS2 = {
 
 void PG_init() { }
 
-void PrintGlyph(uint8_t image[][16], int posY, int posX)
+void PrintGlyph(uint8_t image[][16])
 {
   int i = 0;
   for (int x = 0;x < Glyph2.height; x++)
   {
     for (int y = 0;y < Glyph2.width; y++)
     {
-      image[y + posY][x + posX] = Glyph2.glyph[i];
+      image[y + Cursor1.posY][x + Cursor1.posX] = Glyph2.glyph[i];
       i++;
     }
   }
 }
-
 
 /**
  * \brief Draws preview of led display for moblie modifications.
