@@ -5,6 +5,6 @@
 
 void PG_init();
 
-void GlyphPos1(uint8_t image[][16]);
+void PrintGlyph(uint8_t image[][16], int posY, int posX);
 
 void ImagePrint(const uint8_t image[][16]);

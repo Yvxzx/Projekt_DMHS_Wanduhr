@@ -63,7 +63,7 @@ void loop()
 
   delay(1000);
 
-  GlyphPos1(image);
+  PrintGlyph(image, 0, 7);
   ImagePrint(image);
 /*
   // Glyphs
