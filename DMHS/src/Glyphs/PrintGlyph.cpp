@@ -221,7 +221,6 @@ void PrintGlyph(uint8_t image[][16], int posY, int posX)
   }
 }
 
-
 /**
  * \brief Draws preview of led display for moblie modifications.
  * 
