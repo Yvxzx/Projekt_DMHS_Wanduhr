@@ -49,9 +49,13 @@ void setup() {
 // loop that runns indefinetly 
 void loop() 
 {
-  // outputs, Minutes and Hours
-  Serial.println(CP_getHourAsString());
-  Serial.println(CP_getMinuteAsString());
+  // outputs, Minutes and Hours as single chars
+  Serial.println(Num1());
+  Serial.println(Num2());
+  Serial.println(Num3());
+  Serial.println(Num4());
+
+ 
   
   // RD_run();
 
@@ -64,6 +68,9 @@ void loop()
   delay(1000);
 
   PrintGlyph(image);
+  
+
+
   ImagePrint(image);
 /*
   // Glyphs

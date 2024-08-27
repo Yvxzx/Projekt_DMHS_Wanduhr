@@ -216,6 +216,11 @@ static const tGlyph GlyphS2 = {
 
 void PG_init() { }
 
+
+//
+// Glyphe mithilfe der Zeitangabe variieren und bestimmen.
+//
+
 void PrintGlyph(uint8_t image[][16])
 {
   int i = 0;

@@ -23,6 +23,11 @@ void CP_init(int offset)
     rtc.offset = offset;
 }
 
+//
+// Zeit in 4 teile aufteilen und als int
+//
+
+
 /**
  * \brief   Formats the current hour as string
  * 
@@ -44,3 +49,24 @@ String CP_getMinuteAsString()
     // Serial.println(rtc.getTime("%M"));
     return rtc.getTime("%M");
 } 
+
+char Num1()
+{
+    String Hour1 = CP_getHourAsString(); 
+    return Hour1.charAt(0);
+}
+char Num2()
+{
+    String Hour2 = CP_getHourAsString(); 
+    return Hour2.charAt(1);
+}
+char Num3()
+{
+    String Minute1 = CP_getMinuteAsString(); 
+    return Minute1.charAt(0);
+}
+char Num4()
+{
+    String Minute2 = CP_getMinuteAsString(); 
+    return Minute2.charAt(1);
+}
