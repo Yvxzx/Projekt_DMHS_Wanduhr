@@ -53,7 +53,8 @@ String CP_getMinuteAsString()
 char Num1()
 {
     String Hour1 = CP_getHourAsString(); 
-    return Hour1.charAt(0);
+    char Hour1char = Hour1.charAt(0);
+    return Hour1char.ToInt();
 }
 char Num2()
 {
