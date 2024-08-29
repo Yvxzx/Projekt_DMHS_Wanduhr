@@ -50,12 +50,10 @@ void setup() {
 void loop() 
 {
   // outputs, Minutes and Hours as single chars
-  Serial.println(Num1());
-  Serial.println(Num2());
-  Serial.println(Num3());
-  Serial.println(Num4());
-
- 
+  Serial.println(NumForHour1());
+  Serial.println(NumForHour2());
+  Serial.println(NumForMinute1());
+  Serial.println(NumForMinute2());
   
   // RD_run();
 

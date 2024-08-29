@@ -50,24 +50,27 @@ String CP_getMinuteAsString()
     return rtc.getTime("%M");
 } 
 
-char Num1()
+int NumForHour1()
 {
     String Hour1 = CP_getHourAsString(); 
-    char Hour1char = Hour1.charAt(0);
-    return Hour1char.ToInt();
+    int Hour1int = Hour1.charAt(0);
+    return Hour1int;
 }
-char Num2()
+int NumForHour2()
 {
     String Hour2 = CP_getHourAsString(); 
-    return Hour2.charAt(1);
+    int Hour2int = Hour2.charAt(1);
+    return Hour2int;
 }
-char Num3()
+int NumForMinute1()
 {
     String Minute1 = CP_getMinuteAsString(); 
-    return Minute1.charAt(0);
+    int Minute1int = Minute1.charAt(0);
+    return Minute1int;
 }
-char Num4()
+int NumForMinute2()
 {
     String Minute2 = CP_getMinuteAsString(); 
-    return Minute2.charAt(1);
+    int Minute2int = Minute2.charAt(1);
+    return Minute2int;
 }
