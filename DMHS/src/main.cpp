@@ -22,8 +22,6 @@ static int j = 0;
 static int i = 0;
 static char ab;
 
-void ImagePrint(const uint8_t image[][16]);
-
 /**
  * \brief the first process that runs 
 */
