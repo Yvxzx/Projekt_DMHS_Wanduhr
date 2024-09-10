@@ -6,7 +6,7 @@
 #include "Renderer/Renderer.h"
 #include "LedWallEncoder/LedWallEncoder.h"
 #include "WallDriver/LEDWallDriver.h"
-#include "Glyphs/PrintGlyph.h"
+#include "Glyphs/WriteGlyph.h"
 
 
 // sets GPIO(General Purpous Input Output) Ports to Easily readable Abreviations.
@@ -48,10 +48,10 @@ void setup() {
 void loop() 
 {
   // outputs, Minutes and Hours as single chars
-  Serial.println(NumForHour1());
-  Serial.println(NumForHour2());
-  Serial.println(NumForMinute1());
-  Serial.println(NumForMinute2());
+  Serial.println(GetTimePos1());
+  Serial.println(GetTimePos2());
+  Serial.println(GetTimePos3());
+  Serial.println(GetTimePos4());
   
   // RD_run();
 
@@ -63,7 +63,7 @@ void loop()
 
   delay(1000);
 
-  PrintGlyph(image);
+  WriteGlyph(image);
   
 
 

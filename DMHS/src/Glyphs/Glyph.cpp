@@ -221,7 +221,7 @@ void PG_init() { }
 // Glyphe mithilfe der Zeitangabe variieren und bestimmen.
 //
 
-void PrintGlyph(uint8_t image[][16])
+void WriteGlyph(uint8_t image[][16])
 {
   int i = 0;
   for (int x = 0;x < Glyph2.height; x++)
@@ -232,6 +232,14 @@ void PrintGlyph(uint8_t image[][16])
       i++;
     }
   }
+}
+tGlyph NumToGlyph(int num)
+{
+  tGlyph *glypharr[10] = {Glyph0.glyph, Glyph1.glyph, Glyph2.glyph, Glyph3.glyph, Glyph4.glyph, Glyph5.glyph, Glyph6.glyph, Glyph7.glyph, Glyph8.glyph, Glyph9.glyph};
+      if (num < 0 || num >= 10) {
+        return 0; 
+    }
+  return glypharr[num];
 }
 
 /**
