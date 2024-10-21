@@ -48,10 +48,10 @@ void setup() {
 void loop() 
 {
   // outputs, Minutes and Hours as single chars
-  Serial.println(GetTimePos1());
-  Serial.println(GetTimePos2());
-  Serial.println(GetTimePos3());
-  Serial.println(GetTimePos4());
+  Serial.println(CP_GetTimePos1());
+  Serial.println(CP_GetTimePos2());
+  Serial.println(CP_GetTimePos3());
+  Serial.println(CP_GetTimePos4());
   
   // RD_run();
 

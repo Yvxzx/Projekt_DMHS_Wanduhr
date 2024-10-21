@@ -21,7 +21,7 @@ void WD_BufferOutput(const uint8_t *buffer) {
 
   for (int i = 0;i < 256;i++) {
     uint8_t pixel = buffer[i];
-    PixelPush(pixel);
+    WD_PixelPush(pixel);
   }
 
   delay(1);
@@ -33,7 +33,7 @@ void WD_BufferOutput(const uint8_t *buffer) {
  * 
  * \param[in] value buffer values either on or off.
  */
-static void PixelPush(uint8_t value) {
+static void WD_PixelPush(uint8_t value) {
                 // one-line if statment.
   digitalWrite(SDI, value > 0 ? HIGH : LOW);
   delayMicroseconds(1);

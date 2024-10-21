@@ -13,8 +13,8 @@ String CP_getHourAsString();
 
 String CP_getMinuteAsString();
 
-int GetTimePos1();
-int GetTimePos2();
-int GetTimePos3();
-int GetTimePos4();
+int CP_GetTimePos1();
+int CP_GetTimePos2();
+int CP_GetTimePos3();
+int CP_GetTimePos4();
 
