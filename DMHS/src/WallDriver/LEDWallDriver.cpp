@@ -7,7 +7,7 @@ const uint8_t LA = GPIO_NUM_17;
 const uint8_t SDI = GPIO_NUM_25;
 const uint8_t CLK = GPIO_NUM_26;
 
-static void PixelPush(uint8_t value);
+static void WD_PixelPush(uint8_t value);
 
 void WD_init() {}
 
