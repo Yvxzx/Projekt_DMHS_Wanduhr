@@ -23,6 +23,7 @@ typedef struct sGlyph {
 static const tGlyph Glyph0 = {
   .width = 4,
   .height = 7,
+  .glyphName = '0',
   .glyph = {
     0x00,0xff,0xff,0x00,
     0xff,0x00,0x00,0xff,
@@ -233,6 +234,7 @@ void WriteGlyph(uint8_t image[][16])
     }
   }
 }
+
 tGlyph NumToGlyph(int num)
 {
   tGlyph *glypharr[10] = {Glyph0.glyph, Glyph1.glyph, Glyph2.glyph, Glyph3.glyph, Glyph4.glyph, Glyph5.glyph, Glyph6.glyph, Glyph7.glyph, Glyph8.glyph, Glyph9.glyph};
