@@ -20,7 +20,7 @@ static uint8_t buffer[256] = { 0 };
 static uint8_t image[16][16] = { 0 };
 static int j = 0;
 static int i = 0;
-static char ab;
+//static char ab;
 
 /**
  * \brief the first process that runs 
