@@ -23,11 +23,6 @@ void CP_init(int offset)
     rtc.offset = offset;
 }
 
-//
-// Zeit in 4 teile aufteilen und als int
-//
-
-
 /**
  * \brief   Formats the current hour as string
  * 
@@ -56,18 +51,21 @@ int CP_GetTimePos1()
     int Hour1int = Hour1.charAt(0);
     return Hour1int;
 }
+
 int CP_GetTimePos2()
 {
     String Hour2 = CP_getHourAsString(); 
     int Hour2int = Hour2.charAt(1);
     return Hour2int;
 }
+
 int CP_GetTimePos3()
 {
     String Minute1 = CP_getMinuteAsString(); 
     int Minute1int = Minute1.charAt(0);
     return Minute1int;
 }
+
 int CP_GetTimePos4()
 {
     String Minute2 = CP_getMinuteAsString(); 

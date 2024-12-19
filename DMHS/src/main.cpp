@@ -64,8 +64,6 @@ void loop()
   delay(1000);
 
   WriteGlyph(image);
-  
-
 
   ImagePrint(image);
 /*
