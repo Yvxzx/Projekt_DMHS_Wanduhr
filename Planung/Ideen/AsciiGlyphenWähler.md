@@ -1,5 +1,7 @@
 ## Die Idee
-Man nutzt die Ascii-werte der zahlen als Id der Glyphen sommit kann man einen Array von den zu schreibenden Glyphen erstellen den man dan mithilfe eines anderen darauf abgestimmten Prozesses auf den Bildschirm ausgeben kann.
+Man nutzt die Ascii-werte der zahlen als Id der Glyphen sommit kann man 
+einen Array von den zu schreibenden Glyphen erstellen den man dan mithilfe 
+eines anderen darauf abgestimmten Prozesses auf den Bildschirm ausgeben kann.
 
 ![Flowchart](Flowchart.png)
 

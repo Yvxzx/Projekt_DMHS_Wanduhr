@@ -31,6 +31,8 @@ void WD_BufferOutput(const uint8_t *buffer) {
 /**
  * \brief Uses digitalWrite (Arduino.h's Funktion) to input signals into Display
  * 
+ *        
+ * 
  * \param[in] value buffer values either on or off.
  */
 static void WD_PixelPush(uint8_t value) {
