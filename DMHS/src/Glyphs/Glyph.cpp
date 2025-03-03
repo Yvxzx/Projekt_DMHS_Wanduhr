@@ -245,16 +245,6 @@ void WriteGlyph(uint8_t image[][16])
   }
 }
 
-// What it suposed to do: Convert integer to glyph
-tGlyph NumToGlyph(int num)
-{
-  tGlyph *glypharr[10] = {Glyph0.glyph, Glyph1.glyph, Glyph2.glyph, Glyph3.glyph, Glyph4.glyph, Glyph5.glyph, Glyph6.glyph, Glyph7.glyph, Glyph8.glyph, Glyph9.glyph};
-      if (num < 0 || num >= 10) {
-        return 0; 
-    }
-  return glypharr[num];
-}
-
 /**
  * \brief Draws preview of led display for moblie modifications.
  * 
