@@ -14,7 +14,6 @@ static const tCursor Cursor1 = {
 
 /**
  * \brief   Initializes the glyph access module
- * 
  */
 typedef struct sGlyph {
   uint8_t width;
@@ -219,15 +218,8 @@ static const tGlyph GlyphS2 = {
   }
 };
 
-void PG_init() { }
-
-
 /**
- * \brief   Writes a glyph to the image
- * 
- *          restrctions:
- *                - The glyph must fit in the image
- *                - Write Glyph can only write one Glyph
+ * \brief   Writes one glyph to the image
  * 
  * \param image Image to write the glyph
  */

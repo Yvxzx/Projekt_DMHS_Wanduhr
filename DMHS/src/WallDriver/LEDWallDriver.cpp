@@ -9,8 +9,6 @@ const uint8_t CLK = GPIO_NUM_26;
 
 static void WD_PixelPush(uint8_t value);
 
-void WD_init() {}
-
 /**
  * \brief Cycles through buffer array, extracts every value and runs Pixelpush per value
  * 
@@ -30,8 +28,6 @@ void WD_BufferOutput(const uint8_t *buffer) {
 
 /**
  * \brief Uses digitalWrite (Arduino.h's Funktion) to input signals into Display
- * 
- *        
  * 
  * \param[in] value buffer values either on or off.
  */
