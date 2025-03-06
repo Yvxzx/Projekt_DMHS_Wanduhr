@@ -45,50 +45,8 @@ String CP_getMinuteAsString()
     return rtc.getTime("%M");
 } 
 
-/**
- * \brief  Formats the first hour character as integer
- * 
- * \return  Integer with the current hour as integer formatted number
- */
-int CP_GetTimePos1()
-{
-    String Hour1 = CP_getHourAsString(); 
-    int Hour1int = Hour1.charAt(0);
-    return Hour1int;
-}
-
-/**
- * \brief  Formats the second hour character as integer
- * 
- * \return  Integer with the current hour as integer formatted number
- */
-int CP_GetTimePos2()
-{
-    String Hour2 = CP_getHourAsString(); 
-    int Hour2int = Hour2.charAt(1);
-    return Hour2int;
-}
-
-/**
- * \brief  Formats the first minute character as integer
- * 
- * \return  Integer with the current minute as integer formatted number
- */
-int CP_GetTimePos3()
-{
-    String Minute1 = CP_getMinuteAsString(); 
-    int Minute1int = Minute1.charAt(0);
-    return Minute1int;
-}
-
-/**
- * \brief  Formats the second minute character as integer
- * 
- * \return  Integer with the current minute as integer formatted number
- */
-int CP_GetTimePos4()
-{
-    String Minute2 = CP_getMinuteAsString(); 
-    int Minute2int = Minute2.charAt(1);
-    return Minute2int;
+int CP_timeIntGet(int position) {
+    String timeString = rtc.getTime("%H%M");
+    int timeInt = timeString.charAt(position);
+    return timeInt;
 }

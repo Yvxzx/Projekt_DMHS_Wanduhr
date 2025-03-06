@@ -1,5 +1,23 @@
+#include "Glyph.h"
 #include <stdint.h>
 #include <Arduino.h>
+
+/** \file
+ *  \addtogroup Glyph A glyph library
+ *  @{
+ *  \brief  Library of available glyphs as pixel graphics
+ * 
+ *          # Theory of operation
+ *          A collection of glyphs to use for the LED display, 
+ *          and fuctions to write the Glyphs into the image array.
+ *          
+ *          # How to use the module
+ *          Use WriteGlyph to print the chosen glyph into the image array.
+ *          
+ *          # Inner workings
+ *          The fuction WriteGlyph takes the array of the chosen glyph and 
+ *          overrides the image array at the position according to the cursor.
+ */
 
 
 typedef struct sCursor{
@@ -15,12 +33,12 @@ static const tCursor Cursor1 = {
 /**
  * \brief   Initializes the glyph access module
  */
-typedef struct sGlyph {
-  uint8_t width;
-  uint8_t height;
-  char glyphName;
-  uint8_t glyph[];
-}tGlyph;
+struct sGlyph {
+  uint8_t width; ///< Width of the Glyph array
+  uint8_t height; ///< Height of the Glyph array
+  char glyphName; ///< Identifyer of the Glyph
+  uint8_t glyph[]; ///< The Glyph data
+};
 
 // 0
 static const tGlyph Glyph0 = {
@@ -37,6 +55,7 @@ static const tGlyph Glyph0 = {
     0x00,0xff,0xff,0x00   
   }
 };
+
 // 1
 static const tGlyph Glyph1 = {
   .width = 4,
@@ -52,6 +71,7 @@ static const tGlyph Glyph1 = {
     0x00,0x00,0xff,0x00
   }
 };
+
 // 2
 static const tGlyph Glyph2 = {
   .width = 4,
@@ -67,6 +87,7 @@ static const tGlyph Glyph2 = {
     0xff,0xff,0xff,0xff
   }
 };
+
 // 3
 static const tGlyph Glyph3 = {
   .width = 4,
@@ -82,6 +103,7 @@ static const tGlyph Glyph3 = {
     0x00,0xff,0xff,0x00
   }
 };
+
 // 4
 static const tGlyph Glyph4 = {
   .width = 4,
@@ -97,6 +119,7 @@ static const tGlyph Glyph4 = {
     0x00,0x00,0x00,0xff
   }
 };
+
 // 5
 static const tGlyph Glyph5 = {
   .width = 4,
@@ -112,6 +135,7 @@ static const tGlyph Glyph5 = {
     0x00,0xff,0xff,0x00
   }
 };
+
 // 6
 static const tGlyph Glyph6 = {
   .width = 4,
@@ -127,6 +151,7 @@ static const tGlyph Glyph6 = {
     0x00,0xff,0xff,0x00
   }
 };
+
 // 7
 static const tGlyph Glyph7 = {
   .width = 4,
@@ -142,6 +167,7 @@ static const tGlyph Glyph7 = {
     0x00,0x00,0xff,0x00
   }
 };
+
 // 8
 static const tGlyph Glyph8 = {
   .width = 4,
@@ -157,6 +183,7 @@ static const tGlyph Glyph8 = {
     0x00,0xff,0xff,0x00
   }
 };
+
 // 9
 static const tGlyph Glyph9 = {
   .width = 4,
@@ -172,6 +199,7 @@ static const tGlyph Glyph9 = {
     0x00,0xff,0xff,0x00
   }
 };
+
 // h
 static const tGlyph GlyphH = {
   .width = 4,
@@ -187,6 +215,7 @@ static const tGlyph GlyphH = {
     0xff,0x00,0x00,0xff
   }
 };
+
 // S1
 static const tGlyph GlyphS1 = {
   .width = 5,
@@ -202,6 +231,7 @@ static const tGlyph GlyphS1 = {
     0x00,0x00,0x00,0x00,0x00
   }
 };
+
 // S2
 static const tGlyph GlyphS2 = {
   .width = 5,
@@ -219,24 +249,72 @@ static const tGlyph GlyphS2 = {
 };
 
 /**
+ * \brief Glyph representation of 0.
+ * 
+ * This pointer refers to a static glyph structure representing the number 0.
+ */
+const tGlyph * const Glyph_0 = &Glyph0;
+const tGlyph * const Glyph_1 = &Glyph1;
+const tGlyph * const Glyph_2 = &Glyph2;
+const tGlyph * const Glyph_3 = &Glyph3;
+const tGlyph * const Glyph_4 = &Glyph4;
+const tGlyph * const Glyph_5 = &Glyph5;
+const tGlyph * const Glyph_6 = &Glyph6;
+const tGlyph * const Glyph_7 = &Glyph7;
+const tGlyph * const Glyph_8 = &Glyph8;
+const tGlyph * const Glyph_9 = &Glyph9;
+const tGlyph * const Glyph_H = &GlyphH;
+const tGlyph * const Glyph_S1 = &GlyphS1;
+const tGlyph * const Glyph_S2 = &GlyphS2;
+
+/**
+ * \brief Array of pointers to all the glyphs.
+ */
+static const tGlyph *glyphs[] = {
+  Glyph_0, Glyph_1, Glyph_2, 
+  Glyph_3, Glyph_4, Glyph_5,
+  Glyph_6, Glyph_7, Glyph_8, 
+  Glyph_9, Glyph_H, Glyph_S1,
+  Glyph_S2,
+  0 ///< null terminator
+};
+
+/**
  * \brief   Writes one glyph to the image
  * 
  * \param image Image to write the glyph
  */
 
-void WriteGlyph(uint8_t image[][16])
+void WriteGlyph(uint8_t image[][16], const tGlyph *glyph)
 {
   int i = 0;
-  for (int x = 0;x < Glyph2.height; x++)
+  for (int x = 0;x < glyph->height; x++)
   {
-    for (int y = 0;y < Glyph2.width; y++)
+    for (int y = 0;y < glyph->width; y++)
     {
-      image[y + Cursor1.posY][x + Cursor1.posX] = Glyph2.glyph[i];
+      image[y + Cursor1.posY][x + Cursor1.posX] = glyph->glyph[i];
       i++;
     }
   }
 }
 
+/*
+void WriteGlyph(uint8_t image[][16], char glyphName) {
+  const tGlyph *cursor = glyphs;
+  const tGlyph *glyph = GlyphH;
+
+
+  while (*cursor != 0) {
+    if (cursor->glyphName = glyphName) {
+      glyph = cursor;
+      break;
+    }
+    cursor++;
+  }
+
+  WriteGlyph(image, glyph);
+}
+*/
 /**
  * \brief Draws preview of led display for moblie modifications.
  * 
@@ -253,3 +331,5 @@ void ImagePrint(const uint8_t image[][16]) {
   }
   Serial.println("+----------------------------------+");
 }
+
+/** @} */
