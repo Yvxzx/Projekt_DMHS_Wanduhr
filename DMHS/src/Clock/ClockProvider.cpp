@@ -1,3 +1,22 @@
+
+/** \file
+ *  \addtogroup The time provider
+ *  @{
+ *  \brief  manages time functions
+ * 
+ *          # Theory of operation
+ *          Handels basic time returnig functions
+ *          
+ *          
+ *          # How to use the module
+ *          Is used to get local time
+ * 
+ *          
+ *          # Inner workings
+ *           
+ * 
+ *          
+ */
 #include "ClockProvider.h"
 
 #include <Arduino.h>
