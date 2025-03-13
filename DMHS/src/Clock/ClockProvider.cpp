@@ -44,7 +44,11 @@ String CP_getMinuteAsString()
     // Serial.println(rtc.getTime("%M"));
     return rtc.getTime("%M");
 } 
-
+/**
+ * \brief Gets one Time Position as Integer
+ * 
+ * \return Integer from given position in time string
+ */
 int CP_timeIntGet(int position) {
     String timeString = rtc.getTime("%H%M");
     int timeInt = timeString.charAt(position);
