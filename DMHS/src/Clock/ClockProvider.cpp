@@ -1,6 +1,6 @@
 
 /** \file
- *  \addtogroup The time provider
+ *  \addtogroup Clockprovider time provider
  *  @{
  *  \brief  manages time functions
  * 

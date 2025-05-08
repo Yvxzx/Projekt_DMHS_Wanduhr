@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
 /** \file
- *  \addtogroup The LED-Wall-Driver
+ *  \addtogroup LEDWD LED-Wall-Driver
  *  @{
  *  \brief the bare minimum to controll the Input to the LED-Wall
  * 
