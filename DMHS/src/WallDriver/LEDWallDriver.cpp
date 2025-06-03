@@ -9,10 +9,10 @@
  *          The LED Wall Driver gets the imput from the buffer array and translates it into PIN inputs.
  * 
  *          # How to use the module
- *          Use the BufferOutput with the buffer array to iniciate the transmition to the LED Wall
+ *          Use the BufferOutput with the buffer array to iniciate the transmition to the LED Wall.
  * 
  *          # Inner workings
- *          The function buffer output calls WD_PixelPush 256 timesto insert all of the pixels into the LED Wall
+ *          The function buffer output calls WD_PixelPush 256 times to insert all of the pixels into the LED Wall.
  */         
 
 /**

@@ -2,6 +2,21 @@
 
 #include "LedWallEncoder.h"
 
+/** \file
+ *  \addtogroup The translating module
+ *  @{
+ *  \brief  Translates the buffer array into a 2d array according to the LED-wall's layout
+ * 
+ *          # Theory of operation
+ *          Uses handmade table to decide which input outputs where.
+ *          
+ *          # How to use the module
+ *          USe LWC_Encode with the parameter buffer and image to translate the image to the buffer
+ *          
+ *          # Inner workings
+ *          alignes the 16 by 16 grid into the buffer in the corect order  
+ *          
+ */
 
 
 // Translating key for controlling the LED Display

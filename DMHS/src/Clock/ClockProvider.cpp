@@ -1,3 +1,8 @@
+#include "ClockProvider.h"
+
+#include <Arduino.h>
+#include <ESP32Time.h>
+#include <time.h>
 
 /** \file
  *  \addtogroup Clockprovider time provider
@@ -5,23 +10,18 @@
  *  \brief  manages time functions
  * 
  *          # Theory of operation
- *          Handels basic time returnig functions
+ *          Handels basic time returnig functions.
  *          
  *          
  *          # How to use the module
- *          Is used to get local time
+ *          Is used to get local time.
  * 
  *          
  *          # Inner workings
- *           
+ *          This module provides the necessary time information using the rtc library.
  * 
  *          
  */
-#include "ClockProvider.h"
-
-#include <Arduino.h>
-#include <ESP32Time.h>
-#include <time.h>
 
 static ESP32Time rtc;
 
@@ -73,3 +73,5 @@ int CP_timeIntGet(int position) {
     int timeInt = timeString.charAt(position);
     return timeInt;
 }
+
+/** @} */

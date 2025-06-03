@@ -19,12 +19,21 @@
  *          overrides the image array at the position according to the cursor.
  */
 
-
+/**
+ * \brief The defenitionof a possible implemetation of a cursor.
+ * 
+ * You would be able to write glyphs at the cursors position.
+ */
 typedef struct sCursor{
   uint8_t posX;
   uint8_t posY;
 }tCursor;
 
+/**
+ * \brief A possible implemetation of a cursor.
+ * 
+ * You would be able to write glyphs at the cursors position.
+ */
 static const tCursor Cursor1 = {
   .posX = 0,
   .posY = 0
@@ -254,17 +263,77 @@ static const tGlyph GlyphS2 = {
  * This pointer refers to a static glyph structure representing the number 0.
  */
 const tGlyph * const Glyph_0 = &Glyph0;
+/**
+ * \brief Glyph representation of 1.
+ * 
+ * This pointer refers to a static glyph structure representing the number 1.
+ */
 const tGlyph * const Glyph_1 = &Glyph1;
+/**
+ * \brief Glyph representation of 2.
+ * 
+ * This pointer refers to a static glyph structure representing the number 2.
+ */
 const tGlyph * const Glyph_2 = &Glyph2;
+/**
+ * \brief Glyph representation of 3.
+ * 
+ * This pointer refers to a static glyph structure representing the number 3.
+ */
 const tGlyph * const Glyph_3 = &Glyph3;
+/**
+ * \brief Glyph representation of 4.
+ * 
+ * This pointer refers to a static glyph structure representing the number 4.
+ */
 const tGlyph * const Glyph_4 = &Glyph4;
+/**
+ * \brief Glyph representation of 5.
+ * 
+ * This pointer refers to a static glyph structure representing the number 5.
+ */
 const tGlyph * const Glyph_5 = &Glyph5;
+/**
+ * \brief Glyph representation of 6.
+ * 
+ * This pointer refers to a static glyph structure representing the number 6.
+ */
 const tGlyph * const Glyph_6 = &Glyph6;
+/**
+ * \brief Glyph representation of 7.
+ * 
+ * This pointer refers to a static glyph structure representing the number 7.
+ */
 const tGlyph * const Glyph_7 = &Glyph7;
+/**
+ * \brief Glyph representation of 8.
+ * 
+ * This pointer refers to a static glyph structure representing the number 8.
+ */
 const tGlyph * const Glyph_8 = &Glyph8;
+/**
+ * \brief Glyph representation of 9.
+ * 
+ * This pointer refers to a static glyph structure representing the number 9.
+ */
 const tGlyph * const Glyph_9 = &Glyph9;
+/**
+ * \brief Glyph representation of H.
+ * 
+ * This pointer refers to a static glyph structure representing the number H.
+ */
 const tGlyph * const Glyph_H = &GlyphH;
+/**
+ * \brief Glyph representation of smiley 1.
+ * 
+ * This pointer refers to a static glyph structure representing the smiley nr 1.
+ */
 const tGlyph * const Glyph_S1 = &GlyphS1;
+/**
+ * \brief Glyph representation of smiley 2.
+ * 
+ * This pointer refers to a static glyph structure representing smiley nr 2.
+ */
 const tGlyph * const Glyph_S2 = &GlyphS2;
 
 /**

@@ -9,6 +9,11 @@
 #include <stdint.h>
 #include <Arduino.h>
 
+/**
+ * \brief The defenitionof a possible implemetation of a cursor.
+ * 
+ * You would be able to write glyphs at the cursors position.
+ */
 typedef struct sGlyph tGlyph;
 
 extern const tGlyph * const Glyph_0;
