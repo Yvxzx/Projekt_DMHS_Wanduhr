@@ -1,0 +1,5 @@
+<map id="CP_GetTimePos3" name="CP_GetTimePos3">
+<area shape="rect" id="Node000001" title="Formats the first minute character as integer." alt="" coords="5,5,133,32"/>
+<area shape="rect" id="Node000002" href="$_clock_provider_8cpp.html#ae55208e64a7fc15e60925d60273a4075" title="Formats the current minute as string." alt="" coords="181,5,335,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,16,165,16,165,21,133,21"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="CP_GetTimePos2" name="CP_GetTimePos2">
+<area shape="rect" id="Node000001" title="Formats the second hour character as integer." alt="" coords="5,5,133,32"/>
+<area shape="rect" id="Node000002" href="$_clock_provider_8cpp.html#a19f765253acd97cdc6ff531cc7726857" title="Formats the current hour as string." alt="" coords="181,5,324,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,16,165,16,165,21,133,21"/>
+</map>
